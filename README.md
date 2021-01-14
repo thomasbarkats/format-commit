@@ -2,14 +2,12 @@
 
 Easily format and standardize your commits for all your javascript projects using Git.
 
-&nbsp;
 ## Installation
 
 ```sh
 $ npm i format-commit --save-dev
 ```
 
-&nbsp;
 ## Usage
 
 In the scripts part of your package.json file add a new line `"commit": "format-commit"` and use `$ npm run commit` to commit your changes with format-commit.
