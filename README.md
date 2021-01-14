@@ -18,14 +18,14 @@ The first time you use the command within your project, format-commit will ask y
 
 If you want to change format-commit configuration without manually editing the json file you can run the command `$ format-commit --config`.
 
-### Configuration
+## Configuration
 
 | Property | Description |
 | :------- | :---------- |
-| format | The formatting of your commit titles. <br> 1: (type) Name / 2: (type) name <br> 3: type: Name / 4: type: Name |
-| types | The different types of commit allowed. Not defined during assisted configuration, default values used: <br> feat / fix / core / test |
-| minLength | Minimum size allowed for your commit titles |
-| maxLength | Maximum size allowed for your commit titles |
-| changeVersion | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on main branch": All commits on your main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
-| mainBranch | Main Git branch of your project. Use if changeVersion is defined on "only on main branch". |
-| showAllVersionTypes | Show all possible types of version changes in the wizard, or show only the main ones (major / minor / patch / \<custom\>) |
+| **format** | The formatting of your commit titles. <br> 1: (type) Name / 2: (type) name <br> 3: type: Name / 4: type: Name |
+| **types** | The different types of commit allowed. Not defined during assisted configuration, default values used: <br> feat / fix / core / test |
+| **minLength** | Minimum size allowed for your commit titles |
+| **maxLength** | Maximum size allowed for your commit titles |
+| **changeVersion** | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on main branch": All commits on your main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
+| **mainBranch** | Main Git branch of your project. Use if changeVersion is defined on "only on main branch". |
+| **showAllVersionTypes** | Show all possible types of version changes in the wizard, or show only the main ones (major / minor / patch / \<custom\>) |
