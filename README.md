@@ -14,7 +14,7 @@ In the scripts part of your package.json file add a new line `"commit": "format-
 
 Or install format-commit globally to use directly `$ format-commit` command .
 
-The first time you use the command within your project, format-commit will ask you some questions to configure your commits and create a configuration file `commit.config.json` at the root of your project.
+The first time you use the command within your project, format-commit will ask you some questions to configure your commits and create a configuration file `commit-config.json` at the root of your project.
 
 If you want to change format-commit configuration without manually editing the json file you can run the command `$ format-commit --config`.
 

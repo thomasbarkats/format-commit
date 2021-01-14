@@ -1,4 +1,5 @@
 {
+    "configFile": "commit-config",
     "commitFormats": [
         { "value": 1, "title": "(type) Name" },
         { "value": 2, "title": "(type) name" },
