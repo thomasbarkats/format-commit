@@ -1,6 +1,6 @@
 {
   "name": "format-commit",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "description": "Format and standardize your git commits",
   "main": "./lib/index.js",
   "type": "commonjs",

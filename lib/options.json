@@ -6,12 +6,6 @@
         { "value": 3, "title": "type: Name"  },
         { "value": 4, "title": "type: name" }
     ],
-    "commitTypes": [
-        { "value": "fix" },
-        { "value": "feat" },
-        { "value": "core" },
-        { "value": "test" }
-    ],
     "versionChangeMode": [
         { "value": "always" },
         { "value": "mainbranch", "title": "only on main branch" },
