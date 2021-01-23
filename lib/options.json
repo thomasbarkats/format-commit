@@ -8,7 +8,7 @@
     ],
     "versionChangeMode": [
         { "value": "always" },
-        { "value": "mainbranch", "title": "only on main branch" },
+        { "value": "releaseBranch", "title": "only on release branch" },
         { "value": "never" }
     ],
     "versionTypes": [

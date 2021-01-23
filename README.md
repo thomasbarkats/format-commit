@@ -26,6 +26,6 @@ If you want to change format-commit configuration without manually editing the j
 | **types** | The different types of commit allowed. Not defined during assisted configuration, default values used: <br> feat / fix / core / test |
 | **minLength** | Minimum size allowed for your commit titles |
 | **maxLength** | Maximum size allowed for your commit titles |
-| **changeVersion** | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on main branch": All commits on your main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
-| **mainBranch** | Main Git branch of your project. Use if changeVersion is defined on "only on main branch". |
+| **changeVersion** | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on release branch": All commits on your release/main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
+| **releaseBranch** | Release/main Git branch of your project. Use if changeVersion is defined on "only on release branch". |
 | **showAllVersionTypes** | Show all possible types of version changes in the wizard, or show only the main ones (major / minor / patch / \<custom\>) |

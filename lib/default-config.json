@@ -3,7 +3,7 @@
     "minLength": 8,
     "maxLength": 70,
     "changeVersion": "never",
-    "mainBranch": "master",
+    "releaseBranch": "master",
     "showAllVersionTypes": false,
     "types": [
         { "value": "fix", "description": "Bug(s) correction" },
