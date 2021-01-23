@@ -1,6 +1,6 @@
 {
   "name": "format-commit",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Format and standardize your git commits",
   "main": "./lib/index.js",
   "type": "commonjs",
@@ -11,7 +11,9 @@
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "bin": {
     "format-commit": "./lib/index.js"
   },
