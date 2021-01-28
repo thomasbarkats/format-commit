@@ -29,3 +29,4 @@ If you want to change format-commit configuration without manually editing the j
 | **changeVersion** | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on release branch": All commits on your release/main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
 | **releaseBranch** | Release/main Git branch of your project. Use if changeVersion is defined on "only on release branch". |
 | **showAllVersionTypes** | Show all possible types of version changes in the wizard, or show only the main ones (major / minor / patch / \<custom\>) |
+| **stageAllChanges** | Auto-stage all changes before each commit |

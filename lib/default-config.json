@@ -5,6 +5,7 @@
     "changeVersion": "never",
     "releaseBranch": "master",
     "showAllVersionTypes": false,
+    "stageAllChanges": false,
     "types": [
         { "value": "fix", "description": "Bug(s) correction" },
         { "value": "feat", "description": "New feature(s)"},

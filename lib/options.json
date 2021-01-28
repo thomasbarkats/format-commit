@@ -9,7 +9,7 @@
     "versionChangeMode": [
         { "value": "always" },
         { "value": "releaseBranch", "title": "only on release branch" },
-        { "value": "never" }
+        { "value": "never", "title": "never (always ask)" }
     ],
     "versionTypes": [
         { "value": "major" },
