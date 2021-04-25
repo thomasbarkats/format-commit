@@ -1,5 +1,4 @@
 /debug
 /node_modules
 /.git
-/.vscode
 package-lock.json
