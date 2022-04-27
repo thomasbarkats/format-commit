@@ -1,7 +1,7 @@
 {
   "name": "format-commit",
-  "version": "0.1.10",
-  "description": "Format and standardize your git commits",
+  "version": "0.1.11",
+  "description": "Format and standardize your Git commits",
   "main": "./lib/index.js",
   "type": "commonjs",
   "scripts": {
@@ -17,7 +17,7 @@
   "bin": {
     "format-commit": "./lib/index.js"
   },
-  "author": "Sendups",
+  "author": "Thomas BARKATS",
   "keywords": [
     "git",
     "commit",
@@ -29,12 +29,12 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "commander": "^6.2.1",
-    "kleur": "^4.1.3",
-    "prompts": "^2.4.0"
+    "commander": "^9.2.0",
+    "kleur": "^4.1.4",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "^8.14.0"
   },
   "repository": {
     "type": "git",

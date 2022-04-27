@@ -1,15 +1,17 @@
 {
     "format": 1,
     "minLength": 8,
-    "maxLength": 70,
+    "maxLength": 80,
     "changeVersion": "never",
     "releaseBranch": "master",
     "showAllVersionTypes": false,
     "stageAllChanges": false,
     "types": [
-        { "value": "fix", "description": "Bug(s) correction" },
+        { "value": "fix", "description": "Issue(s) fixing" },
         { "value": "feat", "description": "New feature(s)"},
         { "value": "core", "description": "Change(s) on the application core" },
-        { "value": "test" , "description": "Change(s) related to tests"}
+        { "value": "test" , "description": "Change(s) related to tests"},
+        { "value": "config" , "description": "Project configuration"},
+        { "value": "doc" , "description": "Documentation / comment(s)"}
     ]
 }
