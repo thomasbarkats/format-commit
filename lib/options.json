@@ -4,7 +4,11 @@
         { "value": 1, "title": "(type) Name" },
         { "value": 2, "title": "(type) name" },
         { "value": 3, "title": "type: Name"  },
-        { "value": 4, "title": "type: name" }
+        { "value": 4, "title": "type: name" },
+        { "value": 5, "title": "type(scope) Name" },
+        { "value": 6, "title": "type(scope) name" },
+        { "value": 7, "title": "type(scope): Name" },
+        { "value": 8, "title": "type(scope): name" }
     ],
     "versionChangeMode": [
         { "value": "always" },

@@ -8,10 +8,13 @@
     "stageAllChanges": false,
     "types": [
         { "value": "fix", "description": "Issue(s) fixing" },
-        { "value": "feat", "description": "New feature(s)"},
+        { "value": "feat", "description": "New feature(s)" },
         { "value": "core", "description": "Change(s) on the application core" },
-        { "value": "test" , "description": "Change(s) related to tests"},
-        { "value": "config" , "description": "Project configuration"},
-        { "value": "doc" , "description": "Documentation / comment(s)"}
+        { "value": "test" , "description": "Change(s) related to tests" },
+        { "value": "config" , "description": "Project configuration" },
+        { "value": "doc" , "description": "Documentation / comment(s)" }
+    ],
+    "scopes": [
+        { "value": "example", "description": "Your scope's description" }
     ]
 }
