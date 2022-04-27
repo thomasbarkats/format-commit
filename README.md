@@ -22,8 +22,9 @@ If you want to change format-commit configuration without manually editing the j
 
 | Property | Description |
 | :------- | :---------- |
-| **format** | The formatting of your commit titles. <br> 1: (type) Name / 2: (type) name <br> 3: type: Name / 4: type: Name |
-| **types** | The different types of commit allowed. Not defined during assisted configuration, default values used: <br> feat / fix / core / test |
+| **format** | Format option for your commit titles. <br> 1 - (type) Name / 2 - (type) name <br> 3 - type: Name / 4 - type: name <br> 5 - type(scope) Name / 6 - type(scope) name <br> 7 - type(scope): Name / 8 - type(scope): name |
+| **types** | The different types of commit allowed. Not defined during assisted configuration, default values used: feat / fix / core / test / config / doc |
+| **scopes** | Your application's scopes to categorize your commits (only for related formats 5 to 8). Not defined during assisted configuration |
 | **minLength** | Minimum size allowed for your commit titles |
 | **maxLength** | Maximum size allowed for your commit titles |
 | **changeVersion** | "always": All commits must obligatorily involve a change of version (no preliminary request). <br> "only on release branch": All commits on your release/main branch must obligatorily involve a change of version (no preliminary request). <br> "never": Commits do not necessarily lead to a version change whatever the branch, the wizard will always ask. |
