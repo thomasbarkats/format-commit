@@ -1,7 +1,7 @@
 {
   "name": "format-commit",
   "version": "0.2.2",
-  "description": "Format and standardize your Git commits",
+  "description": "Simple CLI tool to standardize Git commit formatting",
   "main": "./lib/index.js",
   "type": "commonjs",
   "scripts": {
@@ -21,11 +21,16 @@
   "keywords": [
     "git",
     "commit",
+    "commits",
     "cli",
     "format",
     "standardize",
-    "light",
-    "minimalist"
+    "conventional",
+    "semantic",
+    "workflow",
+    "tool",
+    "javascript",
+    "nodejs"
   ],
   "license": "ISC",
   "dependencies": {
