@@ -1,6 +1,6 @@
 {
   "name": "format-commit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Lightweight CLI to standardize commit messages",
   "license": "ISC",
   "author": "Thomas BARKATS",
