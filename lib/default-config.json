@@ -3,7 +3,7 @@
     "minLength": 8,
     "maxLength": 80,
     "changeVersion": "never",
-    "releaseBranch": "master",
+    "releaseBranch": "main",
     "showAllVersionTypes": false,
     "stageAllChanges": false,
     "types": [
