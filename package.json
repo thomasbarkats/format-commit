@@ -1,7 +1,7 @@
 {
   "name": "format-commit",
-  "version": "0.2.2",
-  "description": "Simple CLI tool to standardize Git commit formatting",
+  "version": "0.3.0",
+  "description": "Lightweight CLI to standardize commit messages",
   "license": "ISC",
   "author": "Thomas BARKATS",
   "keywords": [
@@ -43,7 +43,7 @@
     "format-commit": "./lib/index.js"
   },
   "dependencies": {
-    "commander": "^9.2.0",
+    "commander": "^14.0.0",
     "kleur": "^4.1.4",
     "prompts": "^2.4.2"
   },

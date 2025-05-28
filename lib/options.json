@@ -11,20 +11,20 @@
         { "value": 8, "title": "type(scope): name" }
     ],
     "versionChangeMode": [
-        { "value": "always" },
+        { "value": "never", "title": "never (always ask)" },
         { "value": "releaseBranch", "title": "only on release branch" },
-        { "value": "never", "title": "never (always ask)" }
+        { "value": "always" }
     ],
     "versionTypes": [
-        { "value": "major" },
-        { "value": "minor" },
         { "value": "patch" },
+        { "value": "minor" },
+        { "value": "major" },
         { "value": "custom", "title": "<custom>" }
     ],
     "allVersionTypes": [
-        { "value": "premajor" },
-        { "value": "preminor" },
         { "value": "prepatch" },
+        { "value": "preminor" },
+        { "value": "premajor" },
         { "value": "prerelease", "title": "prerelease <tag>" },
         { "value": "from-git" }
     ]

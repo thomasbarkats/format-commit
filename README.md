@@ -1,6 +1,6 @@
 # format-commit
 
-🚀 Simple, minimal commit standardization for JavaScript projects.
+🚀 Lightweight CLI for consistent commit message formatting.
 
 Standardize your commit naming with basic rules, and guide your workflow through an automated script. No bloat, no complexity — just clean, consistent commits.
 
