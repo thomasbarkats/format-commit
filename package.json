@@ -2,21 +2,7 @@
   "name": "format-commit",
   "version": "0.2.2",
   "description": "Simple CLI tool to standardize Git commit formatting",
-  "main": "./lib/index.js",
-  "type": "commonjs",
-  "scripts": {
-    "start": "node lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .js --fix",
-    "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint"
-  },
-  "files": [
-    "lib/**/*"
-  ],
-  "bin": {
-    "format-commit": "./lib/index.js"
-  },
+  "license": "ISC",
   "author": "Thomas BARKATS",
   "keywords": [
     "git",
@@ -32,21 +18,37 @@
     "javascript",
     "nodejs"
   ],
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasbarkats/format-commit.git"
+  },
+  "homepage": "https://github.com/thomasbarkats/format-commit#readme",
+  "bugs": {
+    "url": "https://github.com/thomasbarkats/format-commit/issues"
+  },
+  "main": "./lib/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js --fix",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "commit": "npm run lint && npm run start"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "bin": {
+    "format-commit": "./lib/index.js"
+  },
   "dependencies": {
     "commander": "^9.2.0",
     "kleur": "^4.1.4",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "eslint": "^8.14.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sendups/format-commit.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sendups/format-commit/issues"
-  },
-  "homepage": "https://github.com/sendups/format-commit#readme"
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0"
+  }
 }
