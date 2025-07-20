@@ -1,31 +1,31 @@
 {
-    "configFile": "commit-config",
-    "commitFormats": [
-        { "value": 1, "title": "(type) Name" },
-        { "value": 2, "title": "(type) name" },
-        { "value": 3, "title": "type: Name"  },
-        { "value": 4, "title": "type: name" },
-        { "value": 5, "title": "type(scope) Name" },
-        { "value": 6, "title": "type(scope) name" },
-        { "value": 7, "title": "type(scope): Name" },
-        { "value": 8, "title": "type(scope): name" }
-    ],
-    "versionChangeMode": [
-        { "value": "never", "title": "never (always ask)" },
-        { "value": "releaseBranch", "title": "only on release branch" },
-        { "value": "always" }
-    ],
-    "versionTypes": [
-        { "value": "patch" },
-        { "value": "minor" },
-        { "value": "major" },
-        { "value": "custom", "title": "<custom>" }
-    ],
-    "allVersionTypes": [
-        { "value": "prepatch" },
-        { "value": "preminor" },
-        { "value": "premajor" },
-        { "value": "prerelease", "title": "prerelease <tag>" },
-        { "value": "from-git" }
-    ]
+  "configFile": "commit-config",
+  "commitFormats": [
+    { "value": 1, "title": "(type) Name" },
+    { "value": 2, "title": "(type) name" },
+    { "value": 3, "title": "type: Name"  },
+    { "value": 4, "title": "type: name" },
+    { "value": 5, "title": "type(scope) Name" },
+    { "value": 6, "title": "type(scope) name" },
+    { "value": 7, "title": "type(scope): Name" },
+    { "value": 8, "title": "type(scope): name" }
+  ],
+  "versionChangeMode": [
+    { "value": "never", "title": "never (always ask)" },
+    { "value": "releaseBranch", "title": "only on release branch" },
+    { "value": "always" }
+  ],
+  "versionTypes": [
+    { "value": "patch" },
+    { "value": "minor" },
+    { "value": "major" },
+    { "value": "custom", "title": "<custom>" }
+  ],
+  "allVersionTypes": [
+    { "value": "prepatch" },
+    { "value": "preminor" },
+    { "value": "premajor" },
+    { "value": "prerelease", "title": "prerelease <tag>" },
+    { "value": "from-git" }
+  ]
 }
