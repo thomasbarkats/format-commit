@@ -10,6 +10,10 @@
     { "value": 7, "title": "type(scope): Name" },
     { "value": 8, "title": "type(scope): name" }
   ],
+  "branchFormats": [
+    { "value": 1, "title": "type/description" },
+    { "value": 2, "title": "type/scope/description" }
+  ],
   "versionChangeMode": [
     { "value": "never", "title": "never (always ask)" },
     { "value": "releaseBranch", "title": "only on release branch" },
