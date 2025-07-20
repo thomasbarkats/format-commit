@@ -6,7 +6,6 @@
   "changeVersion": "never",
   "releaseBranch": "main",
   "showAllVersionTypes": false,
-  "stageAllChanges": false,
   "types": [
     { "value": "fix", "description": "Issue(s) fixing" },
     { "value": "feat", "description": "New feature(s)" },

@@ -62,7 +62,6 @@ format-commit --config
 | **changeVersion** | Version change policy:<br>`never` - Always prompt for version change<br>`only on release branch` - Only release branch commits require version change<br>`always` - All commits require version change |
 | **releaseBranch** | Main/release branch name (used if changeVersion = `only on release branch`) |
 | **showAllVersionTypes** | Show all version types or only main ones (`major`/`minor`/`patch`/`custom`) |
-| **stageAllChanges** | Auto-stage all changes before commit ⚠️ |
 
 ## CLI Options
 
