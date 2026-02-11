@@ -1,6 +1,6 @@
-const js = require('@eslint/js');
+import js from '@eslint/js';
 
-module.exports = [
+export default [
   {
     ignores: [
       'debug/**',
@@ -11,8 +11,8 @@ module.exports = [
   },
   {
     languageOptions: {
-      ecmaVersion: 12,
-      sourceType: 'commonjs',
+      ecmaVersion: 2022,
+      sourceType: 'module',
       globals: {
         console: 'readonly',
         process: 'readonly'
