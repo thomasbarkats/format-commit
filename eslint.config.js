@@ -47,7 +47,6 @@ module.exports = [
       ],
       'curly': 'error',
       'no-return-await': 'error',
-      'camelcase': 'warn',
       'dot-notation': 'error',
       'no-multi-spaces': 'warn',
       'require-await': 'warn',
@@ -62,14 +61,6 @@ module.exports = [
         'error',
         'never'
       ],
-      'object-curly-spacing': [
-        'error',
-        'always',
-        {
-          'arraysInObjects': false,
-          'objectsInObjects': false
-        }
-      ]
     }
   }
 ];

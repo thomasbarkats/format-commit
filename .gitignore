@@ -4,3 +4,5 @@
 package-lock.json
 commit-config.json
 /.vscode
+.claude
+.env

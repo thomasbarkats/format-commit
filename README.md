@@ -62,6 +62,25 @@ format-commit --config
 | **changeVersion** | Version change policy:<br>`never` - Always prompt for version change<br>`only on release branch` - Only release branch commits require version change<br>`always` - All commits require version change |
 | **releaseBranch** | Main/release branch name (used if changeVersion = `only on release branch`) |
 | **showAllVersionTypes** | Show all version types or only main ones (`major`/`minor`/`patch`/`custom`) |
+| **ai.enabled** | Enable AI-powered commit title suggestions (default: `false`) |
+| **ai.provider** | AI provider: `anthropic` (Claude) or `openai` (GPT) |
+| **ai.model** | Model to use: `claude-haiku-4-5`, `claude-sonnet-4-5`, `gpt-4o-mini`, or `gpt-4o` |
+| **ai.envPath** | Path to .env file containing the API key (e.g., `.env`) |
+| **ai.envKeyName** | Name of the environment variable for the API key (e.g., `OPENAI_API_KEY`) |
+
+### AI-Powered Suggestions
+
+When AI is enabled, format-commit will analyze your staged changes and suggest 4 complete commit titles that:
+- Follow your configured format and naming conventions
+- Automatically select appropriate types and scopes
+- Respect your min/max length constraints
+- Describe the actual changes in your code
+
+You can either:
+- Choose one of the 4 AI suggestions for quick commits
+- Select "Custom" to enter commit details manually (classic flow)
+
+**Security:** Your API key is stored in a `.env` file (not versioned) and automatically added to `.gitignore`.
 
 ## CLI Options
 

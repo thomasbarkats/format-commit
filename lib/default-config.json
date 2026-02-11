@@ -16,5 +16,10 @@
   ],
   "scopes": [
     { "value": "example", "description": "Your scope's description" }
-  ]
+  ],
+  "ai": {
+    "enabled": false,
+    "envPath": ".env",
+    "largeDiffTokenThreshold": 20000
+  }
 }

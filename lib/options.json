@@ -31,5 +31,31 @@
     { "value": "premajor" },
     { "value": "prerelease", "title": "prerelease <tag>" },
     { "value": "from-git" }
+  ],
+  "aiProviders": [
+    {
+      "value": "anthropic",
+      "title": "Anthropic (Claude)",
+      "models": [
+        { "value": "claude-haiku-4-5", "title": "Claude Haiku 4.5 (Fast & Cheap)" },
+        { "value": "claude-sonnet-4-5", "title": "Claude Sonnet 4.5 (Balanced)" }
+      ]
+    },
+    {
+      "value": "openai",
+      "title": "OpenAI (GPT)",
+      "models": [
+        { "value": "gpt-4o-mini", "title": "GPT-4o Mini (Fast & Cheap)" },
+        { "value": "gpt-4o", "title": "GPT-4o (More Capable)" }
+      ]
+    },
+    {
+      "value": "google",
+      "title": "Google (Gemini)",
+      "models": [
+        { "value": "gemini-2.0-flash", "title": "Gemini 2.0 Flash (Fast & Free)" },
+        { "value": "gemini-1.5-pro", "title": "Gemini 1.5 Pro (More Capable)" }
+      ]
+    }
   ]
 }
