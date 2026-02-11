@@ -59,7 +59,7 @@ format-commit --config
 | **scopes** | Scopes for commit and branch categorization (used in formats 5-8 for commits, format 2 for branches) |
 | **minLength** | Minimum length required for the commit title |
 | **maxLength** | Maximum length required for the commit title and branch description |
-| **changeVersion** | Version change policy:<br>`never` - Always prompt for version change<br>`only on release branch` - Only release branch commits require version change<br>`always` - All commits require version change |
+| **changeVersion** | Version change policy:<br>`never (ignore)` - Never change version, skip prompt (default)<br>`never (always ask)` - Always prompt for version change<br>`only on release branch` - Only release branch commits require version change<br>`always` - All commits require version change |
 | **releaseBranch** | Main/release branch name (used if changeVersion = `only on release branch`) |
 | **showAllVersionTypes** | Show all version types or only main ones (`major`/`minor`/`patch`/`custom`) |
 

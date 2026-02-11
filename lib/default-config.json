@@ -3,7 +3,7 @@
   "branchFormat": 1,
   "minLength": 8,
   "maxLength": 80,
-  "changeVersion": "never",
+  "changeVersion": "ignore",
   "releaseBranch": "main",
   "showAllVersionTypes": false,
   "types": [

@@ -15,6 +15,7 @@
     { "value": 2, "title": "type/scope/description" }
   ],
   "versionChangeMode": [
+    { "value": "ignore", "title": "never (ignore)" },
     { "value": "never", "title": "never (always ask)" },
     { "value": "releaseBranch", "title": "only on release branch" },
     { "value": "always" }
