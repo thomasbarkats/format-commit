@@ -1,6 +1,6 @@
 {
   "name": "format-commit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight CLI to standardize commit messages with AI-powered suggestions",
   "license": "MIT",
   "author": "Thomas BARKATS",
