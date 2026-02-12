@@ -127,7 +127,7 @@ Number of tokens from which not to use AI automatically.
 
 ### AI Suggestions
 
-When AI is enabled, your staged changes will be processed by the defined AI to suggest commit titles that:
+When AI is enabled, your staged changes will be processed by the defined model to suggest commit titles that:
 - Follow your configured format and naming conventions
 - Automatically select appropriate types and scopes
 - Respect your min/max length constraints
@@ -145,7 +145,8 @@ You can either:
 | :---- | :--- | :---------- |
 | `-c` | `--config` | Generate or update configuration file |
 | `-b` | `--branch` | Create a new standardized branch |
-| `-t` | `--test` | Test mode - preview without executing Git commands |
+| `-t` | `--test` | Preview without executing Git commands |
+| `-d` | `--debug` | Display additional logs |
 
 ## Contributing
 
