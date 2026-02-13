@@ -52,37 +52,51 @@ format-commit --config
 
 All configuration is stored in the `commit-config.json` file. Here is the list of all options.
 
-`format`
+**`format`**
 
 Commit title format:
-- 1: `(type) Name` / 2: `(type) name`
-- 3: `type: Name` / 4: `type: name`
-- 5: `type(scope) Name` / 6: `type(scope) name`
-- 7: `type(scope): Name` / 8: `type(scope): name`
+- 1: `(type) Description` / 2: `(type) description`
+- 3: `type: Description` / 4: `type: description`
+- 5: `type(scope) Description` / 6: `type(scope) description`
+- 7: `type(scope): Description` / 8: `type(scope): description`
+- "custom"
 
-`branchFormat`
+**`customFormat`**
+
+Custom commit format pattern. Uses keywords `type`, `scope`, `description` and custom field(s) with `{field}` placeholders. Keywords are case-sensitive.
+
+Example: `{Issue ID} - type - scope - Description`.
+
+**`branchFormat`**
 
 Branch naming format:
 - 1: `type/description`
 - 2: `type/scope/description`
+- "custom"
 
-`types`
+**`customBranchFormat`**
+
+Custom branch format pattern. Uses keywords `type`, `scope`, `description` and custom fields with `{field}` placeholders. Keywords are case-sensitive. Separators must be valid in Git branch names (no spaces, `~`, `^`, `:`, `?`, `*`, `[`, `\`, `..` or `//`). Dynamic parts (description, custom fields) are automatically sanitized to be branch-safe.
+
+Example: `type/{Issue ID}-Description`.
+
+**`types`**
 
 Allowed commit and branch types (default: `feat`, `fix`, `core`, `test`, `config`, `doc`)
 
-`scopes`
+**`scopes`**
 
-Scopes for commit and branch categorization (used in formats 5-8 for commits, format 2 for branches)
+Scopes for commit and branch categorization (used in formats 5-8 for commits, format 2 for branches, or when a custom format includes the `scope` keyword)
 
-`minLength`
+**`minLength`**
 
 Minimum length required for the commit title.
 
-`maxLength`
+**`maxLength`**
 
 Maximum length required for the commit title and branch description.
 
-`changeVersion`
+**`changeVersion`**
 
 Version change policy:
 - `never (ignore)`: Never change version, skip prompt (default)
@@ -90,38 +104,38 @@ Version change policy:
 - `only on release branch`: Only release branch commits require version change
 - `always`: All commits require version change
 
-`releaseBranch`
+**`releaseBranch`**
 
 Main/release branch name (used if changeVersion = `only on release branch`)
 
-`showAllVersionTypes`
+**`showAllVersionTypes`**
 
 Show all version types or only main ones (`major`/`minor`/`patch`/`custom`)
 
-`ai.enabled`
+**`ai.enabled`**
 
 Enable AI commit title suggestions (default: `false`)
 
-`ai.provider`
+**`ai.provider`**
 
 AI provider:
 - `anthropic` (Claude)
 - `openai` (GPT)
 - `google` (Gemini)
 
-`ai.model`
+**`ai.model`**
 
 Model identifier (e.g., `claude-haiku-4-5` or `gpt-4o-mini`)
 
-`ai.envPath`
+**`ai.envPath`**
 
 Path to .env file containing the AI provider API key (e.g., `.env`)
 
-`ai.envKeyName`
+**`ai.envKeyName`**
 
 Name of the environment variable for the API key (e.g., `OPENAI_API_KEY`)
 
-`ai.largeDiffTokenThreshold`
+**`ai.largeDiffTokenThreshold`**
 
 Number of tokens from which not to use AI automatically.
 
