@@ -1,7 +1,11 @@
 /debug
+/dist
+/web/dist
 /node_modules
+/web/node_modules
 /.git
 package-lock.json
+/web/package-lock.json
 commit-config.json
 /.vscode
 .claude
