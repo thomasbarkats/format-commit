@@ -12,7 +12,7 @@ export default function Code({ children, lang }) {
   };
 
   return (
-    <div className="relative group my-4">
+    <div className="relative group mt-4 mb-4">
       <div className="flex items-center justify-between bg-[var(--color-surface-light)] border border-[var(--color-border)] rounded-t-lg px-4 py-2">
         {lang && (
           <span className="text-[11px] uppercase tracking-wider text-slate-600 font-mono">
