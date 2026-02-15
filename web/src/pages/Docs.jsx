@@ -1,57 +1,20 @@
-import { useState, useEffect } from "react";
-import { Copy, Check } from "lucide-react";
+import { useState, useEffect } from 'react';
+import Code from '../components/Code';
+import InlineCode from '../components/InlineCode';
+import ConfigOption from '../components/ConfigOption';
 
-function Code({ children, lang }) {
-  const [copied, setCopied] = useState(false);
-
-  const copy = () => {
-    navigator.clipboard.writeText(children);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="relative group my-4">
-      <div className="flex items-center justify-between bg-[var(--color-surface-light)] border border-[var(--color-border)] rounded-t-lg px-4 py-2">
-        {lang && (
-          <span className="text-[11px] uppercase tracking-wider text-slate-600 font-mono">
-            {lang}
-          </span>
-        )}
-        <button
-          onClick={copy}
-          className="text-slate-600 hover:text-slate-300 transition-colors cursor-pointer ml-auto"
-        >
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-        </button>
-      </div>
-      <pre className="bg-[var(--color-surface)] border border-t-0 border-[var(--color-border)] rounded-b-lg p-4 overflow-x-auto">
-        <code className="font-mono text-sm text-slate-300 leading-relaxed">
-          {children}
-        </code>
-      </pre>
-    </div>
-  );
-}
-
-function InlineCode({ children }) {
-  return (
-    <code className="font-mono text-sm bg-[var(--color-surface-light)] border border-[var(--color-border)] text-[var(--color-accent-light)] px-1.5 py-0.5 rounded">
-      {children}
-    </code>
-  );
-}
 
 const sections = [
-  { id: "installation", label: "Installation" },
-  { id: "usage", label: "Usage" },
-  { id: "configuration", label: "Configuration" },
-  { id: "ai", label: "AI Suggestions" },
-  { id: "cli", label: "CLI Options" },
+  { id: 'installation', label: 'Installation' },
+  { id: 'usage', label: 'Usage' },
+  { id: 'configuration', label: 'Configuration' },
+  { id: 'ai', label: 'AI Suggestions' },
+  { id: 'cli', label: 'CLI Options' },
 ];
 
+
 export default function Docs() {
-  const [active, setActive] = useState("installation");
+  const [active, setActive] = useState('installation');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,12 +25,14 @@ export default function Docs() {
           }
         }
       },
-      { rootMargin: "-20% 0px -60% 0px" }
+      { rootMargin: '-20% 0px -60% 0px' }
     );
 
     for (const s of sections) {
       const el = document.getElementById(s.id);
-      if (el) observer.observe(el);
+      if (el) {
+        observer.observe(el);
+      }
     }
 
     return () => observer.disconnect();
@@ -75,13 +40,15 @@ export default function Docs() {
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const navLinkClass = (id) =>
     `block text-sm py-1.5 pl-4 border-l-2 transition-colors cursor-pointer ${active === id
-      ? "border-[var(--color-accent)] text-white font-medium"
-      : "border-transparent text-slate-500 hover:text-slate-300 hover:border-[var(--color-border-light)]"
+      ? 'border-[var(--color-accent)] text-white font-medium'
+      : 'border-transparent text-slate-500 hover:text-slate-300 hover:border-[var(--color-border-light)]'
     }`;
 
   return (
@@ -107,10 +74,8 @@ export default function Docs() {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className={`text-xs font-medium px-3 py-1.5 rounded-full whitespace-nowrap transition-colors cursor-pointer ${active === s.id
-                ? "bg-[var(--color-accent)]/15 text-[var(--color-accent-light)]"
-                : "text-slate-500 hover:text-slate-300"
-                }`}
+              className={`text-xs font-medium px-3 py-1.5 rounded-full whitespace-nowrap transition-colors cursor-pointer
+                ${active === s.id ? 'bg-[var(--color-accent)]/15 text-[var(--color-accent-light)]' : 'text-slate-500 hover:text-slate-300'}`}
             >
               {s.label}
             </button>
@@ -187,7 +152,7 @@ format-commit --branch  # create branch`}</Code>
             Configuration
           </h2>
           <p className="text-slate-400 mb-6">
-            All settings are stored in{" "}
+            All settings are stored in{' '}
             <InlineCode>commit-config.json</InlineCode> at your project root.
           </p>
 
@@ -196,15 +161,15 @@ format-commit --branch  # create branch`}</Code>
               name="format"
               description="Commit title format. Choose a built-in format or use a custom pattern."
               options={[
-                { value: "1", label: "(type) Description" },
-                { value: "2", label: "(type) description" },
-                { value: "3", label: "type: Description" },
-                { value: "4", label: "type: description" },
-                { value: "5", label: "type(scope) Description" },
-                { value: "6", label: "type(scope) description" },
-                { value: "7", label: "type(scope): Description" },
-                { value: "8", label: "type(scope): description" },
-                { value: '"custom"', label: "Custom pattern" },
+                { value: '1', label: '(type) Description' },
+                { value: '2', label: '(type) description' },
+                { value: '3', label: 'type: Description' },
+                { value: '4', label: 'type: description' },
+                { value: '5', label: 'type(scope) Description' },
+                { value: '6', label: 'type(scope) description' },
+                { value: '7', label: 'type(scope): Description' },
+                { value: '8', label: 'type(scope): description' },
+                { value: '"custom"', label: 'Custom pattern' },
               ]}
             />
 
@@ -247,7 +212,7 @@ format-commit --branch  # create branch`}</Code>
                   Custom fields
                 </h4>
                 <p className="text-sm text-slate-400 mb-2">
-                  Add any custom fields using <InlineCode>{"{Field Name}"}</InlineCode> syntax.
+                  Add any custom fields using <InlineCode>{'{Field Name}'}</InlineCode> syntax.
                   You'll be prompted for these values when committing.
                 </p>
                 <Code lang="text">{`{Issue ID} - type - Description
@@ -272,11 +237,11 @@ type(scope): Description - {JIRA-ID}`}</Code>
               <div className="mt-4">
                 <span className="text-xs text-slate-600">Examples:</span>
                 <div className="mt-2 space-y-2">
-                  <Code lang="text">{`{Issue ID} - type - scope - Description`}</Code>
+                  <Code lang="text">{'{Issue ID} - type - scope - Description'}</Code>
                   <div className="text-xs text-slate-500 -mt-2 pl-4">
                     Result: <InlineCode>PROJ-123 - feat - api - Add user endpoint</InlineCode>
                   </div>
-                  <Code lang="text">{`[type] Description ({Ticket})`}</Code>
+                  <Code lang="text">{'[type] Description ({Ticket})'}</Code>
                   <div className="text-xs text-slate-500 -mt-2 pl-4">
                     Result: <InlineCode>[fix] Resolve login issue (TK-456)</InlineCode>
                   </div>
@@ -288,9 +253,9 @@ type(scope): Description - {JIRA-ID}`}</Code>
               name="branchFormat"
               description="Branch naming format."
               options={[
-                { value: "1", label: "type/description" },
-                { value: "2", label: "type/scope/description" },
-                { value: '"custom"', label: "Custom pattern" },
+                { value: '1', label: 'type/description' },
+                { value: '2', label: 'type/scope/description' },
+                { value: '"custom"', label: 'Custom pattern' },
               ]}
             />
 
@@ -307,7 +272,7 @@ type(scope): Description - {JIRA-ID}`}</Code>
                   Same syntax as customFormat
                 </h4>
                 <p className="text-sm text-slate-400 mb-2">
-                  Uses the same keywords (<InlineCode>type</InlineCode>, <InlineCode>scope</InlineCode>, <InlineCode>description</InlineCode>) and custom fields (<InlineCode>{"{Field}"}</InlineCode>).
+                  Uses the same keywords (<InlineCode>type</InlineCode>, <InlineCode>scope</InlineCode>, <InlineCode>description</InlineCode>) and custom fields (<InlineCode>{'{Field}'}</InlineCode>).
                 </p>
               </div>
 
@@ -328,11 +293,11 @@ type(scope): Description - {JIRA-ID}`}</Code>
               <div className="mt-4">
                 <span className="text-xs text-slate-600">Examples:</span>
                 <div className="mt-2 space-y-2">
-                  <Code lang="text">{`type/{Issue ID}-description`}</Code>
+                  <Code lang="text">{'type/{Issue ID}-description'}</Code>
                   <div className="text-xs text-slate-500 -mt-2 pl-4">
                     Result: <InlineCode>feat/PROJ-123-user-authentication</InlineCode>
                   </div>
-                  <Code lang="text">{`{Sprint}/type-scope-description`}</Code>
+                  <Code lang="text">{'{Sprint}/type-scope-description'}</Code>
                   <div className="text-xs text-slate-500 -mt-2 pl-4">
                     Result: <InlineCode>sprint-42/fix-api-login-error</InlineCode>
                   </div>
@@ -474,8 +439,8 @@ type(scope): Description - {JIRA-ID}`}</Code>
                     Main/release branch name (e.g., <InlineCode>"main"</InlineCode> or <InlineCode>"master"</InlineCode>).
                   </div>
                   <div>
-                    Used when{" "}
-                    <InlineCode>changeVersion</InlineCode> is set to{" "}
+                    Used when{' '}
+                    <InlineCode>changeVersion</InlineCode> is set to{' '}
                     <InlineCode>"releaseBranch"</InlineCode>.
                   </div>
                 </div>
@@ -743,35 +708,6 @@ type(scope): Description - {JIRA-ID}`}</Code>
           </div>
         </section>
       </div>
-    </div>
-  );
-}
-
-function ConfigOption({ name, description, options, example }) {
-  return (
-    <div className="border-b border-[var(--color-border)]/50 pb-6 last:border-0">
-      <h3 className="font-mono text-sm font-medium text-[var(--color-accent-light)] mb-2">
-        {name}
-      </h3>
-      <p className="text-sm text-slate-400 mb-2">{description}</p>
-      {options && (
-        <div className="mt-3 space-y-1">
-          {options.map((o) => (
-            <div key={o.value} className="flex items-baseline gap-3 text-sm">
-              <code className="font-mono text-xs text-slate-500 shrink-0">
-                {o.value}
-              </code>
-              <span className="text-slate-400">{o.label}</span>
-            </div>
-          ))}
-        </div>
-      )}
-      {example && (
-        <div className="mt-2">
-          <span className="text-xs text-slate-600">Example: </span>
-          <code className="font-mono text-sm text-slate-400">{example}</code>
-        </div>
-      )}
     </div>
   );
 }

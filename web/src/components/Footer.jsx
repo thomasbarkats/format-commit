@@ -1,4 +1,5 @@
-import { Heart } from "lucide-react";
+import { Heart } from 'lucide-react';
+
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <span>Built with</span>
         <Heart size={14} className="text-[var(--color-accent)]" />
         <span>
-          by{" "}
+          by{' '}
           <a
             href="https://github.com/thomasbarkats"
             target="_blank"

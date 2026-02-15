@@ -1,6 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Coffee, Github } from "lucide-react";
-import { useState } from "react";
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Coffee, Github } from 'lucide-react';
+import { useState } from 'react';
+
 
 function NpmIcon({ size = 20 }) {
   return (
@@ -18,8 +19,8 @@ export default function Navbar() {
   const linkClass = (path) =>
     `text-sm font-medium transition-colors ${
       location.pathname === path
-        ? "text-[var(--color-accent-light)]"
-        : "text-slate-400 hover:text-white"
+        ? 'text-[var(--color-accent-light)]'
+        : 'text-slate-400 hover:text-white'
     }`;
 
   return (
@@ -36,10 +37,10 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          <Link to="/" className={linkClass("/")}>
+          <Link to="/" className={linkClass('/')}>
             Home
           </Link>
-          <Link to="/docs" className={linkClass("/docs")}>
+          <Link to="/docs" className={linkClass('/docs')}>
             Docs
           </Link>
           <a
@@ -83,10 +84,10 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)] px-6 py-4 flex flex-col gap-4">
-          <Link to="/" className={linkClass("/")} onClick={() => setOpen(false)}>
+          <Link to="/" className={linkClass('/')} onClick={() => setOpen(false)}>
             Home
           </Link>
-          <Link to="/docs" className={linkClass("/docs")} onClick={() => setOpen(false)}>
+          <Link to="/docs" className={linkClass('/docs')} onClick={() => setOpen(false)}>
             Docs
           </Link>
           <a
