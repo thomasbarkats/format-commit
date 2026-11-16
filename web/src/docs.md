@@ -299,18 +299,23 @@ AI provider to use for suggestions.
 
 :::options
 "anthropic" Anthropic (Claude)
-Models: `claude-haiku-4-5` (fast & cheap), `claude-sonnet-4-5` (balanced)
+Models: `claude-haiku-5-5` (fast & cheap), `claude-sonnet-5-5` (balanced)
 
 "openai" OpenAI (GPT)
-Models: `gpt-4o-mini` (fast & cheap), `gpt-4o` (more capable)
+Models: `gpt-6-luna` (fast & cheap), `gpt-6.1-terra` (balanced)
 
 "google" Google (Gemini)
-Models: `gemini-2.0-flash` (fast & free), `gemini-1.5-pro` (more capable)
+Models: `gemini-3.5-flash-lite` (fast & cheap), `gemini-3.8-flash` (more capable)
 :::
 :::
 
+;;
+#### Migrating to v2
+
+Existing configurations keep their selected model. Re-run `format-commit --config` to adopt the current recommendations; this is required for the retired Gemini 1.5 and 2.0 models.
+
 :::config(name="ai.model")
-Model identifier for the selected provider. Choose based on speed/cost trade-off.
+Model identifier for the selected provider. Choose based on speed/cost trade-off. Existing configurations can use another model identifier supported by their provider.
 :::
 
 :::section
@@ -325,6 +330,7 @@ Path to `.env` file containing your API key (default: `".env"`).
 File is automatically added to `.gitignore` during setup
 API key is stored locally and never committed to Git
 Setup validates that `.env` is in `.gitignore` before proceeding
+Your staged diff and commit configuration are sent to the selected AI provider; do not request suggestions for sensitive changes
 :::
 :::
 

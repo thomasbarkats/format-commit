@@ -38,24 +38,24 @@
       "value": "anthropic",
       "title": "Anthropic (Claude)",
       "models": [
-        { "value": "claude-haiku-4-5", "title": "Claude Haiku 4.5 (Fast & Cheap)" },
-        { "value": "claude-sonnet-4-5", "title": "Claude Sonnet 4.5 (Balanced)" }
+        { "value": "claude-haiku-5-5", "title": "Claude Haiku 5.5 (Fast & Cheap)" },
+        { "value": "claude-sonnet-5-5", "title": "Claude Sonnet 5.5 (Balanced)" }
       ]
     },
     {
       "value": "openai",
       "title": "OpenAI (GPT)",
       "models": [
-        { "value": "gpt-4o-mini", "title": "GPT-4o Mini (Fast & Cheap)" },
-        { "value": "gpt-4o", "title": "GPT-4o (More Capable)" }
+        { "value": "gpt-6-luna", "title": "GPT-6 Luna (Fast & Cheap)" },
+        { "value": "gpt-6.1-terra", "title": "GPT-6.1 Terra (Balanced)" }
       ]
     },
     {
       "value": "google",
       "title": "Google (Gemini)",
       "models": [
-        { "value": "gemini-2.0-flash", "title": "Gemini 2.0 Flash (Fast & Free)" },
-        { "value": "gemini-1.5-pro", "title": "Gemini 1.5 Pro (More Capable)" }
+        { "value": "gemini-3.5-flash-lite", "title": "Gemini 3.5 Flash-Lite (Fast & Cheap)" },
+        { "value": "gemini-3.8-flash", "title": "Gemini 3.8 Flash (More Capable)" }
       ]
     }
   ]

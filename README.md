@@ -125,7 +125,7 @@ AI provider:
 
 **`ai.model`**
 
-Model identifier (e.g., `claude-haiku-4-5` or `gpt-4o-mini`)
+Model identifier (e.g., `claude-haiku-5-5`, `gpt-6-luna`, or `gemini-3.5-flash-lite`). Existing configurations can use another model identifier supported by their provider.
 
 **`ai.envPath`**
 
@@ -152,6 +152,10 @@ You can either:
 - Select "Custom" to enter commit details manually (classic flow)
 
 **Security:** AI provider API key is stored in a `.env` file automatically added to `.gitignore`.
+
+**Privacy:** The staged diff and your commit configuration are sent to the selected AI provider. Review staged changes before requesting suggestions, particularly when they contain credentials or sensitive code.
+
+**Migration to v2:** Existing configurations keep their selected model. Re-run `format-commit --config` to adopt the current recommendations; this is required for the retired Gemini 1.5 and 2.0 models.
 
 ## CLI Options
 
