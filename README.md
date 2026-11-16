@@ -164,6 +164,7 @@ You can either:
 | `-c` | `--config` | Generate or update configuration file |
 | `-b` | `--branch` | Create a new standardized branch |
 | `-t` | `--test` | Preview without executing Git commands |
+|  | `--no-ai` | Disable AI suggestions for this run without changing configuration |
 | `-d` | `--debug` | Display additional logs |
 
 ## Contributing

@@ -81,3 +81,12 @@ test('sends structured-output requests to each AI provider', async () => {
     fs.rmSync(tempDir, { recursive: true, force: true });
   }
 });
+
+test('documents the --no-ai command-line override', () => {
+  const help = execFileSync(process.execPath, ['lib/index.js', '--help'], {
+    cwd: path.resolve(import.meta.dirname, '..'),
+    encoding: 'utf-8',
+  });
+
+  assert.match(help, /--no-ai/);
+});
