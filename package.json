@@ -38,6 +38,7 @@
   },
   "scripts": {
     "start": "node lib/index.js",
+    "test": "node --test",
     "lint": "eslint . --fix",
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
